@@ -13,9 +13,23 @@ if($ductTape -ge 15 -or $ductTape -gt 15) {
     Write-Host "Duct tape stock is unknown."
 }
 
+# Flow control with strings.
+$testString = "Ducks are cool"
+Write-Host "`nTest string: $testString`n"
+
+if($testString -like "*Ducks*") {
+    Write-Host "[FOUND] Keyword: 'Ducks'"
+}
+
+if($testString -notlike "*not*") {
+    Write-Host "[NOT FOUND] Keyword: 'not'"
+}
+
 # LEGEND:
 # -ge = Greater (or) Equal.
 # -gt = Greater Than.
 # -eq = Equal (to).
 # -le = Less (or) Equal.
 # -lt = Less Than.
+# -like = Like (used for strings).
+# -notlike = Not like (used for strings).
